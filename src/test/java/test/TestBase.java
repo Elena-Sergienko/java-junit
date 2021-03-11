@@ -19,7 +19,6 @@ public class TestBase {
     public TaskOne taskOne;
     public TaskSix taskSix;
 
-    @BeforeEach
     public void start() {
         WebDriverManager.firefoxdriver().setup();
         driver = new FirefoxDriver();
@@ -32,7 +31,6 @@ public class TestBase {
         taskSix = PageFactory.initElements(driver, TaskSix.class);
     }
 
-    @AfterEach
     public void finish() {
         driver.quit();
     }
